@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>محاسبه bmi</title>
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">محاسبه‌گر پیشرفته BMI</div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="card">
+        <h2>محاسبه شاخص توده بدنی (BMI)</h2>
+        <form id="bmi-form">
+          <div>
+            <label for="weight">وزن (کیلوگرم)</label>
+            <input type="number" id="weight" name="weight" required step="0.1" min="20" max="300" placeholder="مثال: 70">
+          </div>
+          <div>
+            <label for="height">قد (سانتی‌متر)</label>
+            <input type="number" id="height" name="height" required step="0.1" min="100" max="250" placeholder="مثال: 175">
+          </div>
+          <div>
+            <label for="gender">جنسیت</label>
+            <select id="gender" name="gender">
+              <option value="male">مرد</option>
+              <option value="female">زن</option>
+            </select>
+          </div>
+          <div>
+            <label for="age">سن</label>
+            <input type="number" id="age" name="age" required min="18" max="120" placeholder="مثال: 30">
+          </div>
+          <div>
+            <label for="activity">سطح فعالیت</label>
+            <select id="activity" name="activity">
+              <option value="sedentary">کم تحرک</option>
+              <option value="lightly_active">فعالیت سبک</option>
+              <option value="moderately_active">فعالیت متوسط</option>
+              <option value="very_active">بسیار فعال</option>
+              <option value="extra_active">فوق العاده فعال</option>
+            </select>
+          </div>
+          <button type="submit">محاسبه BMI و دریافت توصیه‌ها</button>
+        </form>
+        <div id="result-box" class="result-box"></div>
+      </div>
+
+      <div class="card">
+        <h2>نمودار BMI</h2>
+        <div class="bmi-chart">
+          <div class="bmi-category underweight">
+            <h3>کم وزن</h3>
+            <p>&lt; 18.5</p>
+          </div>
+          <div class="bmi-category normal">
+            <h3>نرمال</h3>
+            <p>18.5 - 24.9</p>
+          </div>
+          <div class="bmi-category overweight">
+            <h3>اضافه وزن</h3>
+            <p>25 - 29.9</p>
+          </div>
+          <div class="bmi-category obese">
+            <h3>چاق</h3>
+            <p>&gt; 30</p>
+          </div>
+        </div>
+        <div id="explanation" class="explanation-box"></div>
+        <div id="ai-recommendations" class="recommendation-box"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
