@@ -31,7 +31,6 @@ document.getElementById('bmi-form').addEventListener('submit', function(e) {
       <h3>نتیجه محاسبه BMI</h3>
       <p>شاخص توده بدنی (BMI) شما: <strong>${bmi.toFixed(2)}</strong></p>
       <p>دسته‌بندی: <strong>${category}</strong></p>
-      <p>وزن اضافه: <strong>${category}</strong></p>
 
       
     `;
